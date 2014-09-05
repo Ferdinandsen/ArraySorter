@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraySorter", "ArraySorter\ArraySorter.csproj", "{C6DB3401-FC5E-4AE8-B10C-54AD308680B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayBuilder", "ArrayBuilder\ArrayBuilder.csproj", "{364BBE63-7816-4D4A-89B8-EC6DE9DB6C8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{FCBA6DFF-8126-4066-9C5C-2196C03EDA7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{C6DB3401-FC5E-4AE8-B10C-54AD308680B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6DB3401-FC5E-4AE8-B10C-54AD308680B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6DB3401-FC5E-4AE8-B10C-54AD308680B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{364BBE63-7816-4D4A-89B8-EC6DE9DB6C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{364BBE63-7816-4D4A-89B8-EC6DE9DB6C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{364BBE63-7816-4D4A-89B8-EC6DE9DB6C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{364BBE63-7816-4D4A-89B8-EC6DE9DB6C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCBA6DFF-8126-4066-9C5C-2196C03EDA7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCBA6DFF-8126-4066-9C5C-2196C03EDA7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCBA6DFF-8126-4066-9C5C-2196C03EDA7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCBA6DFF-8126-4066-9C5C-2196C03EDA7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
