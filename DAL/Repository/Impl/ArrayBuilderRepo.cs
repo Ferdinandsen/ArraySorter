@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repository.Impl
 {
-    public class ArrayBuilderRepo : IArrayBuilder
+    internal class ArrayBuilderRepo : IArrayBuilder
     {
         public void createArray(int size)
         {

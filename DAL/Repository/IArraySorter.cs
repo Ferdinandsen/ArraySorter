@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repository
 {
-    internal interface IArraySorter
+    public interface IArraySorter
     {
         long[] sortArray(int id);
 

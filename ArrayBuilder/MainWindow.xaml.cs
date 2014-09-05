@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,16 @@ namespace ArrayBuilder
     /// </summary>
     public partial class MainWindow : Window
     {
+        DataAccessFacade facade;
         public MainWindow()
         {
+            facade = new DataAccessFacade();
             InitializeComponent();
+        }
+
+        private void btnCreate_Click(object sender, RoutedEventArgs e)
+        {
+            facade.getArrayBuilder().createArray(Convert.ToInt32(txtSize.Text));
         }
     }
 }
