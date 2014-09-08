@@ -8,10 +8,7 @@ namespace DAL.Repository
 {
     public interface IArraySorter
     {
-        void sortArray(TableArray ta);
-
-        long[] getSortedArray(int id);
-
+        List<TableArray> sortArray(TableArray ta);
         List<TableArray> getArray(TableArray ta);
         List<TableArray> getAllArrays();
         void RandomizeArray(TableArray ta);

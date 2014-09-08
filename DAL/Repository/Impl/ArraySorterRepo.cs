@@ -9,11 +9,6 @@ namespace DAL.Repository.Impl
     internal class ArraySorterRepo : IArraySorter
     {
 
-        public long[] getSortedArray(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<TableArray> getArray(TableArray ta)
         {
             List<TableArray> selectedTableArray = new List<TableArray>();
@@ -64,6 +59,18 @@ namespace DAL.Repository.Impl
                 }
                 db.SaveChanges();
             }
+        }
+
+        public List<TableArray> sortArray(TableArray ta)
+        {
+            List<TableArray> localArray = new List<TableArray>();
+            using (var db = new ArraySorterEntities())
+            {
+                db.TableArrays.OrderBy(x => x.ArrayValue);
+                db.SaveChanges();
+                localArray = db.TableArrays.OrderBy(x => x.ArrayValue).ToList();
+            }
+            return localArray;
         }
     }
 }

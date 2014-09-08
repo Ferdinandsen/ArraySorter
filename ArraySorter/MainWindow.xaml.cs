@@ -48,9 +48,7 @@ namespace ArraySorter
         {
             dgsorted.ItemsSource = null;
             var sel = dgUnsorted.SelectedItem as TableArray;
-            facade.getArraySorter().sortArray(sel);
-            fillUnsortedDataGrid();
-            
+            dgsorted.ItemsSource = facade.getArraySorter().sortArray(sel);
         }
 
         private void dgUnsorted_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
