@@ -11,9 +11,14 @@ namespace DAL
     public class DataAccessFacade
     {
         IArrayBuilder ab;
+        IArraySorter asr;
         public IArrayBuilder getArrayBuilder()
         {
             return ab != null ? ab : ab = new ArrayBuilderRepo();
+        }
+
+        public IArraySorter getArraySorter(){
+            return asr != null ? asr : asr = new ArraySorterRepo();
         }
     }
 }

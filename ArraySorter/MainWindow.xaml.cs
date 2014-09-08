@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DAL;
 
 namespace ArraySorter
 {
@@ -20,8 +21,10 @@ namespace ArraySorter
     /// </summary>
     public partial class MainWindow : Window
     {
+        DataAccessFacade facade;
         public MainWindow()
         {
+            facade = new DataAccessFacade();
             InitializeComponent();
             fillSortDataGrid();
             fillUpdateDataGrid();
@@ -38,5 +41,10 @@ namespace ArraySorter
             dgsorted.ItemsSource = null;
         }
 
+
+        private void btnSort_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
