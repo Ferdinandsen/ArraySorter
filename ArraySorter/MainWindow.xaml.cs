@@ -34,7 +34,8 @@ namespace ArraySorter
 
         private void fillSortDataGrid()
         {
-            throw new NotImplementedException();
+            dgsorted.ItemsSource = null;
+            dgsorted.ItemsSource = null;
         }
 
     }
