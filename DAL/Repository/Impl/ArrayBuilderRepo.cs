@@ -52,6 +52,7 @@ namespace DAL.Repository.Impl
                         arr.ArrayValue = rnd.Next(); 
                     }
                 }
+                db.SaveChanges();
             }
         }
 
