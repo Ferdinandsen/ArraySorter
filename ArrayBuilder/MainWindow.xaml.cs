@@ -26,6 +26,12 @@ namespace ArrayBuilder
         {
             facade = new DataAccessFacade();
             InitializeComponent();
+            fillDataGrid();
+        }
+
+        private void fillDataGrid()
+        {
+            dgArrays.ItemsSource = facade.getArrayBuilder().getAllArrays();
         }
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)

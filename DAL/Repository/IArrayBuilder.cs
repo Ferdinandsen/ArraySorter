@@ -16,6 +16,7 @@ namespace DAL.Repository
 
         void deleteArray(int id);
 
+        List<TableArray> getAllArrays();
     }
 
 }

@@ -68,10 +68,24 @@ namespace DAL.Repository.Impl
 
         public void deleteArray(int id)
         {
-            throw new NotImplementedException();
+            using (var db = new ArraySorterEntities())
+            {
+                foreach (TableArray e in db.TableArrays)
+                {
+                    if (e.ArrayID == id)
+                    {
+                        db.TableArrays.Remove(e);
+                    }
+                }
+            }
         }
 
-
-
+        public List<TableArray> getAllArrays()
+        {
+            using (var db = new ArraySorterEntities())
+            {
+                return db.TableArrays.ToList();
+            }
+        }
     }
 }
