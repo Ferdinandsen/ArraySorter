@@ -26,7 +26,20 @@ namespace ArraySorter
         {
             facade = new DataAccessFacade();
             InitializeComponent();
+            fillSortDataGrid();
+            fillUpdateDataGrid();
         }
+
+        private void fillUpdateDataGrid()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void fillSortDataGrid()
+        {
+            throw new NotImplementedException();
+        }
+
 
         private void btnSort_Click(object sender, RoutedEventArgs e)
         {
