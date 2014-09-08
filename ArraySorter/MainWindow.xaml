@@ -6,7 +6,7 @@
         <Border Height="320" Width="257" BorderBrush="Black"  BorderThickness="2" >
             <StackPanel>
                 <DataGrid Name="dgUnsorted" Height="250"></DataGrid>
-                <Button Name="btnSort" Height="20" Width="50" Margin="0,5,0,0">SORT</Button>
+                <Button Name="btnSort" Height="20" Width="50" Margin="0,5,0,0" Click="btnSort_Click">SORT</Button>
             </StackPanel>
         </Border>
         <Border Height="320" Width="257" BorderBrush="Black"  BorderThickness="2" Margin="5,0,0,0" >
