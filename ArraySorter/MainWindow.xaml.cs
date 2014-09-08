@@ -34,7 +34,6 @@ namespace ArraySorter
         {
             dgUnsorted.ItemsSource = null;
             dgUnsorted.ItemsSource = facade.getArraySorter().getAllArrays();
-
         }
 
         private void fillSortDataGrid()
@@ -46,12 +45,12 @@ namespace ArraySorter
 
         private void btnSort_Click(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         private void dgUnsorted_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
         {
-            if (e.Column.Header.Equals( "ArrayIndex") || e.Column.Header.Equals( "ArrayValue"))
+            if (e.Column.Header.Equals("ArrayIndex") || e.Column.Header.Equals("ArrayValue"))
             {
                 e.Cancel = true;
             }
