@@ -19,8 +19,12 @@ namespace DAL.Repository.Impl
             throw new NotImplementedException();
         }
 
+        public List<TableArray> getArray(TableArray ta)
+        {
+            throw new NotImplementedException();
+        }
 
-        public long[] getArray(int id)
+        public List<TableArray> getAllArrays()
         {
             throw new NotImplementedException();
         }

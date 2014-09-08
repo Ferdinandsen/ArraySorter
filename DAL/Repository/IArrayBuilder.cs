@@ -12,8 +12,6 @@ namespace DAL.Repository
 
         void fillArray(int id);
 
-        long[] getArray(int id);
-
         void deleteArray(int id);
 
         List<TableArray> getAllArrays();

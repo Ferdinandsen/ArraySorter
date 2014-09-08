@@ -13,7 +13,6 @@ namespace DAL.Repository.Impl
             int idToCreate;
             using (var db = new ArraySorterEntities())
             {
-
                 try
                 {
                     idToCreate = db.TableArrays.Max(x => x.ArrayID);
@@ -24,8 +23,6 @@ namespace DAL.Repository.Impl
                     idToCreate = 1;
                 }
 
-
-
                 for (int i = 0; i < size; i++)
                 {
                     TableArray ta = new TableArray();
@@ -34,11 +31,9 @@ namespace DAL.Repository.Impl
                     ta.ArrayIndex = i;
                     db.TableArrays.Add(ta);
                 }
-
                 db.SaveChanges();
                 Console.WriteLine(idToCreate);
             }
-
         }
 
         public void fillArray(int id)
@@ -81,9 +76,7 @@ namespace DAL.Repository.Impl
                     tmp[test.ArrayIndex] = test.ArrayValue;
                 }
             }
-
             return tmp;
-
         }
 
         public void deleteArray(int id)

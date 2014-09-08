@@ -31,24 +31,28 @@ namespace ArrayBuilder
 
         private void fillDataGrid()
         {
+            dgArrays.ItemsSource = null;
             dgArrays.ItemsSource = facade.getArrayBuilder().getAllArrays();
         }
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
             facade.getArrayBuilder().createArray(Convert.ToInt32(txtSize.Text));
+            fillDataGrid();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var arr = dgArrays.SelectedItem as TableArray;
             facade.getArrayBuilder().fillArray(arr.ArrayID);
+            fillDataGrid();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             var sel = dgArrays.SelectedItem as TableArray;
             facade.getArrayBuilder().deleteArray(sel.ArrayID);
+            fillDataGrid();
         }
     }
 }

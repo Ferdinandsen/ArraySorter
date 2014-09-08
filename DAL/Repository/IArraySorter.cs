@@ -12,7 +12,7 @@ namespace DAL.Repository
 
         long[] getSortedArray(int id);
 
-        long[] getArray(int id);
-
+        List<TableArray> getArray(TableArray ta);
+        List<TableArray> getAllArrays();
     }
 }
