@@ -26,7 +26,21 @@ namespace DAL.Repository.Impl
 
         public List<TableArray> getAllArrays()
         {
-            throw new NotImplementedException();
+            List<TableArray> localArrays = new List<TableArray>();
+
+            using (var db = new ArraySorterEntities())
+            {
+                foreach (TableArray e in db.TableArrays)
+                {
+                    bool contains = localArrays.Any(x => x.ArrayID == e.ArrayID);
+
+                    if (!contains)
+                    {
+                        localArrays.Add(e);
+                    }
+                }
+            }
+            return localArrays;
         }
     }
 }
