@@ -23,12 +23,19 @@ namespace ArraySorter
         public MainWindow()
         {
             InitializeComponent();
-            fillDataGrid();
+            fillSortDataGrid();
+            fillUpdateDataGrid();
         }
 
-        private void fillDataGrid()
+        private void fillUpdateDataGrid()
         {
             throw new NotImplementedException();
         }
+
+        private void fillSortDataGrid()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
