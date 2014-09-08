@@ -29,9 +29,11 @@ namespace ArraySorter
             fillUpdateDataGrid();
         }
 
-        private void fillUpdateDataGrid()
+        private void fillUnsortedDataGrid()
         {
-            throw new NotImplementedException();
+            dgUnsorted.ItemsSource = null;
+            dgUnsorted.ItemsSource = facade.getArraySorter().getAllArrays();
+
         }
 
         private void fillSortDataGrid()
@@ -51,6 +53,14 @@ namespace ArraySorter
         private void dgUnsorted_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             fillSortDataGrid();
+        }
+
+        private void dgUnsorted_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+            if (e.Column.Header.Equals( "ArrayIndex") || e.Column.Header.Equals( "ArrayValue"))
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
