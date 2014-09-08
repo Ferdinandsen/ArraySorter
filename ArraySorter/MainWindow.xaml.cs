@@ -26,7 +26,7 @@ namespace ArraySorter
         {
             facade = new DataAccessFacade();
             InitializeComponent();
-            fillUpdateDataGrid();
+            fillUnsortedDataGrid();
         }
 
         private void fillUnsortedDataGrid()
@@ -38,7 +38,7 @@ namespace ArraySorter
 
         private void fillSortDataGrid()
         {
-            var ta = dgsorted.SelectedItem as TableArray;
+            var ta = dgUnsorted.SelectedItem as TableArray;
 
             dgsorted.ItemsSource = null;
             dgsorted.ItemsSource = facade.getArraySorter().getArray(ta);
@@ -50,17 +50,26 @@ namespace ArraySorter
             
         }
 
-        private void dgUnsorted_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            fillSortDataGrid();
-        }
-
         private void dgUnsorted_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
         {
             if (e.Column.Header.Equals( "ArrayIndex") || e.Column.Header.Equals( "ArrayValue"))
             {
                 e.Cancel = true;
             }
+        }
+
+        private void dgUnsorted_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            fillSortDataGrid();
+        }
+
+        private void btnRandomize_Click(object sender, RoutedEventArgs e)
+        {
+            var ta = dgUnsorted.SelectedItem as TableArray;
+            dgsorted.ItemsSource = null;
+            facade.getArraySorter().RandomizeArray(ta);
+            fillSortDataGrid();
+
         }
     }
 }

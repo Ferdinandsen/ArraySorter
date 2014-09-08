@@ -53,5 +53,22 @@ namespace DAL.Repository.Impl
             }
             return localArrays;
         }
+
+
+        public void RandomizeArray(TableArray ta)
+        {
+            Random rnd = new Random();
+            using (var db = new ArraySorterEntities())
+            {
+                foreach (TableArray arr in db.TableArrays)
+                {
+                    if (arr.ArrayID == ta.ArrayID)
+                    {
+                        arr.ArrayValue = rnd.Next();
+                    }
+                }
+                db.SaveChanges();
+            }
+        }
     }
 }

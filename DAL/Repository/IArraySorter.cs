@@ -14,6 +14,7 @@ namespace DAL.Repository
 
         List<TableArray> getArray(TableArray ta);
         List<TableArray> getAllArrays();
+        void RandomizeArray(TableArray ta);
 
     }
 }
