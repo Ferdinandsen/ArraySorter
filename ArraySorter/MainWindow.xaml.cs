@@ -23,6 +23,12 @@ namespace ArraySorter
         public MainWindow()
         {
             InitializeComponent();
+            fillDataGrid();
+        }
+
+        private void fillDataGrid()
+        {
+            throw new NotImplementedException();
         }
     }
 }
