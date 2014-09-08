@@ -22,7 +22,7 @@
                     <TextBox Name="txtSize" Width="100" Margin="10,0,0,0"></TextBox>
                 </StackPanel>
 
-                <Button Content="Random Fill Array" Margin="0,20,0,0" Width="100"></Button>
+                <Button Content="Random Fill Array" Margin="0,20,0,0" Width="100" Click="Button_Click"></Button>
                 <Button Content="Delete Array" Margin="0,20,0,0" Width="100"></Button>
                 <Button Content="Save" Margin="0,40,0,0" Width="100"></Button>
 

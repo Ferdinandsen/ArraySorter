@@ -32,5 +32,11 @@ namespace ArrayBuilder
         {
             facade.getArrayBuilder().createArray(Convert.ToInt32(txtSize.Text));
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var arr = dgArrays.SelectedItem as TableArray;
+            facade.getArrayBuilder().fillArray(arr.ArrayID);
+        }
     }
 }

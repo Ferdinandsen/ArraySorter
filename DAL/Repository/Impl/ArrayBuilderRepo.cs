@@ -14,8 +14,17 @@ namespace DAL.Repository.Impl
             using (var db = new ArraySorterEntities())
             {
 
-                idToCreate = db.TableArrays.Max(x => x.ArrayID);
-                idToCreate++;
+                try
+                {
+                    idToCreate = db.TableArrays.Max(x => x.ArrayID);
+                    idToCreate++;
+                }
+                catch (Exception) //InvalidOperationException
+                {
+                    idToCreate = 1;
+                }
+                
+               
 
                 for (int i = 0; i < size; i++)
                 {
@@ -34,7 +43,16 @@ namespace DAL.Repository.Impl
 
         public void fillArray(int id)
         {
-            throw new NotImplementedException();
+            Random rnd = new Random();
+            using (var db = new ArraySorterEntities())
+            {
+                foreach (TableArray arr in db.TableArrays){
+                    if (arr.ArrayID == id)
+                    {
+                        arr.ArrayValue = rnd.Next(); 
+                    }
+                }
+            }
         }
 
         public long[] getArray(int id)
