@@ -23,7 +23,7 @@
                 </StackPanel>
 
                 <Button Content="Random Fill Array" Margin="0,20,0,0" Width="100" Click="Button_Click"></Button>
-                <Button Content="Delete Array" Margin="0,20,0,0" Width="100"></Button>
+                <Button Content="Delete Array" Margin="0,20,0,0" Width="100" Click="Button_Click_1"></Button>
                 <Button Content="Save" Margin="0,40,0,0" Width="100"></Button>
 
             </StackPanel>

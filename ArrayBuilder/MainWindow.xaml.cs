@@ -44,5 +44,11 @@ namespace ArrayBuilder
             var arr = dgArrays.SelectedItem as TableArray;
             facade.getArrayBuilder().fillArray(arr.ArrayID);
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var sel = dgArrays.SelectedItem as TableArray;
+            facade.getArrayBuilder().deleteArray(sel.ArrayID);
+        }
     }
 }

@@ -23,8 +23,8 @@ namespace DAL.Repository.Impl
                 {
                     idToCreate = 1;
                 }
-                
-               
+
+
 
                 for (int i = 0; i < size; i++)
                 {
@@ -46,10 +46,11 @@ namespace DAL.Repository.Impl
             Random rnd = new Random();
             using (var db = new ArraySorterEntities())
             {
-                foreach (TableArray arr in db.TableArrays){
+                foreach (TableArray arr in db.TableArrays)
+                {
                     if (arr.ArrayID == id)
                     {
-                        arr.ArrayValue = rnd.Next(); 
+                        arr.ArrayValue = rnd.Next();
                     }
                 }
             }
@@ -95,6 +96,7 @@ namespace DAL.Repository.Impl
                         db.TableArrays.Remove(e);
                     }
                 }
+                db.SaveChanges();
             }
         }
 
