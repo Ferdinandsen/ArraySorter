@@ -21,7 +21,18 @@ namespace DAL.Repository.Impl
 
         public List<TableArray> getArray(TableArray ta)
         {
-            throw new NotImplementedException();
+            List<TableArray> selectedTableArray = new List<TableArray>();
+            using (var db = new ArraySorterEntities())
+            {
+                foreach (TableArray testTa in db.TableArrays)
+                {
+                    if (ta.ArrayID == testTa.ArrayID)
+                    {
+                        selectedTableArray.Add(testTa);
+                    }
+                }
+            }
+            return selectedTableArray;
         }
 
         public List<TableArray> getAllArrays()

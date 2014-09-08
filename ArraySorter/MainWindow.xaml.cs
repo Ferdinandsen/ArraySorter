@@ -26,7 +26,6 @@ namespace ArraySorter
         {
             facade = new DataAccessFacade();
             InitializeComponent();
-            fillSortDataGrid();
             fillUpdateDataGrid();
         }
 
@@ -37,14 +36,21 @@ namespace ArraySorter
 
         private void fillSortDataGrid()
         {
+            var ta = dgsorted.SelectedItem as TableArray;
+
             dgsorted.ItemsSource = null;
-            dgsorted.ItemsSource = null;
+            dgsorted.ItemsSource = facade.getArraySorter().getArray(ta);
         }
 
 
         private void btnSort_Click(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        private void dgUnsorted_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            fillSortDataGrid();
         }
     }
 }
